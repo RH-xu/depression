@@ -9,3 +9,17 @@
 class DepressionPipeline(object):
     def process_item(self, item, spider):
         return item
+"""
+class JsonWithEncodingPipeline(object):
+
+    def __init__(self):
+        self.file = codecs.open('Test.json', 'w', encoding='utf-8')
+
+    def process_item(self, item, spider):
+        line = json.dumps(dict(item)) + "\n"
+        self.file.write(line.encode('utf-8').decode("unicode_escape"))
+        return item
+
+    def spider_closed(self, spider):
+        self.file.close()
+"""
