@@ -1,3 +1,9 @@
+Second try:
+crawl the post information from the group of 16530, 青春孤独抑郁症.
+start from the url: http://www.douban.com/group/16530/discussion?start=0
+And the output file is Data1227.json.
+
+
 depression
 ==========
 
