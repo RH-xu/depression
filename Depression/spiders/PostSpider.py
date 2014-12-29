@@ -17,10 +17,13 @@ class DepressionSpider(CrawlSpider):
                   #"http://www.douban.com/group/search?cat=1019&q=%E6%8A%91%E9%83%81%E7%97%87"
                   #"http://www.douban.com/group/151898"
                   # "http://www.douban.com/group/151898/discussion?start=3450"
-                   "http://www.douban.com/group/16530/discussion?start=0" # younth loneliness depression
+                  # "http://www.douban.com/group/16530/discussion?start=0" # younth loneliness depression
+                  # "http://www.douban.com/group/459360/discussion?start=0" # anti-depression group
+                  # "http://www.douban.com/group/shouting/discussion?start=0" # depression and zaokuang zheng
+                    "http://www.douban.com/group/fly_vs_free/discussion?start=7800"  #7700" #4050" # with the most members
                  ]
     rules = [
-            Rule(SgmlLinkExtractor(allow=(r'/group/16530/discussion\?start=\d'),restrict_xpaths=('//span[@class="next"]') ),
+            Rule(SgmlLinkExtractor(allow=(r'/group/fly_vs_free/discussion\?start=\d'),restrict_xpaths=('//span[@class="next"]') ),
                  follow=True),
 
             Rule(SgmlLinkExtractor(allow=('/group/topic/[^/]+/$'), restrict_xpaths=('//td[@class="title"]')),
